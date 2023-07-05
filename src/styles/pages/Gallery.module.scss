@@ -1,0 +1,72 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/colors";
+.section {
+  padding-top: 2rem;
+}
+
+.head {
+  margin-bottom: 3rem;
+}
+
+.element__container {
+  @include flex(center, center);
+  margin-bottom: 1rem;
+
+  .element {
+    margin-inline: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: colors.$light-accent;
+  }
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    border-top: 1px solid colors.$dark-text;
+  }
+}
+
+.title {
+  font-size: 3.25rem;
+  text-align: center;
+  font-weight: bold;
+}
+.gallery__grid {
+  display: grid;
+  gap: 0.6rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.card {
+  aspect-ratio: 1/1.5;
+  box-shadow: 0 0.25rem 1rem hsl(0 0% 100%/0.1);
+  position: relative;
+  cursor: pointer;
+  transition: scale 0.2s ease-in;
+
+  &:hover {
+    scale: 1.05;
+    z-index: 10;
+  }
+}
+
+.card__img {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+@media (min-width: 40em) {
+  .card.featured {
+    grid-row: span 2;
+    grid-column: span 2;
+
+    .card__img {
+      aspect-ratio: 1/1.25;
+    }
+  }
+}
