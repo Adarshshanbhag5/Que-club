@@ -26,8 +26,8 @@ const navLinks = [
     id: "106",
     primary: false,
   },
-  { name: "Resources", route: "/resources", id: "107", primary: false },
-  { name: "Careers", route: "/careers", id: "108", primary: false },
+  { name: "Resources", route: "/", id: "107", primary: false },
+  { name: "Careers", route: "/", id: "108", primary: false },
 ];
 export default function Navbar() {
   const [menu, setMenu] = useState<boolean>(false);

@@ -1,41 +1,32 @@
 @use "../abstracts/mixins" as *;
 
-.main {
-  padding: 0 0rem;
-}
-
 .hero {
   @include flex(center, center, column);
-  min-height: 100vh;
-  padding: 0 1.5rem;
-  margin-bottom: 2rem;
-  background-image: url("/gallery/gallery-img14.jpg");
+  background-image: url("/gallery/gallery-img12.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  min-height: 70vh;
 }
 
 .hero__content {
-  backdrop-filter: blur(0.2rem);
   text-align: center;
   padding: 1rem 2rem;
+  backdrop-filter: blur(0.2rem);
 
   .hero__title {
     font-size: 4rem;
     margin-bottom: 2rem;
-    text-shadow: 0 0.25rem 1rem hsl(0 100% 100%/0.3);
+    text-shadow: 0 0.25rem 1rem hsla(0, 0%, 15%, 0.685);
   }
   .hero__description {
     width: 60%;
     margin-inline: auto;
-    margin-bottom: 1rem;
     font-size: 1.2rem;
     line-height: 1.7;
     font-weight: 200;
   }
 }
-
-//about section
 
 .about__section {
   @include flex();
@@ -45,7 +36,7 @@
   width: 100%;
   margin-inline: auto;
   padding: 0 1.5rem;
-  margin-bottom: 2rem;
+  margin: 2rem auto;
 }
 
 .about__content {
@@ -91,24 +82,6 @@
   border-radius: 5px;
 }
 
-//members section
-
-.members__section {
-  max-width: 1400px;
-  width: 100%;
-  margin-inline: auto;
-  min-height: 100vh;
-  padding: 0 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.members__inner {
-  @include flex();
-  gap: 1rem;
-}
-
-//testimonial
-
 .testimonial__section {
   margin-top: 1rem;
 }
@@ -124,16 +97,8 @@
       width: 80%;
     }
   }
-  .title__large {
-    font-size: 2.4rem;
-    width: 100%;
-  }
 
   .about__section {
-    flex-direction: column;
-  }
-
-  .members__inner {
     flex-direction: column;
   }
 }

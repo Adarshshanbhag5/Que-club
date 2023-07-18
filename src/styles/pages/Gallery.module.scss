@@ -1,37 +1,9 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/colors";
 .section {
-  padding-top: 2rem;
+  padding: 2rem 0;
 }
 
-.head {
-  margin-bottom: 3rem;
-}
-
-.element__container {
-  @include flex(center, center);
-  margin-bottom: 1rem;
-
-  .element {
-    margin-inline: 0.5rem;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: colors.$light-accent;
-  }
-  &::before,
-  &::after {
-    content: "";
-    display: block;
-    width: 3.5rem;
-    border-top: 1px solid colors.$dark-text;
-  }
-}
-
-.title {
-  font-size: 3.25rem;
-  text-align: center;
-  font-weight: bold;
-}
 .gallery__grid {
   display: grid;
   gap: 0.6rem;

@@ -15,13 +15,8 @@ import img10 from "/public/gallery/gallery-img14.jpg";
 import img11 from "/public/gallery/gallery-img07.jpg";
 import Image from "next/image";
 import styles from "@/styles/pages/Gallery.module.scss";
-import { Libre_Caslon_Display } from "next/font/google";
 import { useTransition, animated } from "@react-spring/web";
-
-const libre_caslon_display = Libre_Caslon_Display({
-  subsets: ["latin"],
-  weight: "400",
-});
+import SectionHead from "@/components/SectionHead";
 
 const images = [
   { src: featuredImg, alt: "featured", id: "100" },
@@ -47,14 +42,7 @@ export default function Gallery() {
   return (
     <main className="container">
       <section className={styles.section}>
-        <div className={styles.head}>
-          <div className={styles.element__container}>
-            <p className={styles.element}>showcase</p>
-          </div>
-          <h1 className={`${libre_caslon_display.className} ${styles.title}`}>
-            Our Gallery
-          </h1>
-        </div>
+        <SectionHead head="Our Gallery" subHead="Showcase" />
         <div className={styles.gallery__grid}>
           {transition((style, { src, alt, id }, _, index) => (
             <animated.div

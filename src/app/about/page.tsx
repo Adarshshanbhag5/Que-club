@@ -1,25 +1,21 @@
+import React from "react";
+import styles from "@/styles/pages/About.module.scss";
 import Image from "next/image";
-import styles from "../styles/pages/Home.module.scss";
 import about from "/public/about.jpg";
-import MemberShipCard from "@/components/MemberShipCard";
 import SectionHead from "@/components/SectionHead";
 import Testimonial from "@/components/Testimonial";
-// import herobg from "/public/gallery/gallery-img14.jpg";
 
-export default function Home() {
+export default function About() {
   return (
-    <main className={styles.main}>
+    <main>
       <section className={styles.hero}>
         <div className={`container ${styles.hero__content}`}>
-          <h1 className={styles.hero__title}>
-            Unleash Your Cue Mastery at Que Club
-          </h1>
+          <h1 className={styles.hero__title}>About us</h1>
           <p className={styles.hero__description}>
-            Immerse yourself in the world of snooker excellence at Que Club.
-            Join us for thrilling matches, expert coaching, and a vibrant
-            community of snooker enthusiasts.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
+            corporis repellendus cum voluptatem ducimus est nemo voluptates
+            explicabo quisquam omnis!
           </p>
-          <div className="primary__button">View more</div>
         </div>
       </section>
       <section className={styles.about__section}>
@@ -46,22 +42,6 @@ export default function Home() {
         </div>
         <div className={styles.about__imgWrap}>
           <Image src={about} alt="about us" className={styles.about__img} />
-        </div>
-      </section>
-      <section className={styles.members__section}>
-        <SectionHead head="Join us Today" subHead="Out Pricing" />
-        <div className={styles.members__inner}>
-          <MemberShipCard popular={false} headTitle="Pro member" price="3000" />
-          <MemberShipCard
-            popular={true}
-            headTitle="Regular member"
-            price="2000"
-          />
-          <MemberShipCard
-            popular={false}
-            headTitle="Premium member"
-            price="5000"
-          />
         </div>
       </section>
       <section className={styles.testimonial__section}>
