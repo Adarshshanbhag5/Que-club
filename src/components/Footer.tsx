@@ -43,7 +43,7 @@ export default function Footer() {
                 </li>
               </div>
               <li>
-                <p>Let's chat</p>
+                <p>Let&apos;s chat</p>
                 <Link href="mailto:adarshshanbhag5@gmail.com">
                   queclub@gmail.com
                 </Link>

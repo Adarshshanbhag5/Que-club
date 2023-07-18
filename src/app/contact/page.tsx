@@ -8,7 +8,7 @@ export default function Contact() {
       <section className={styles.hero}>
         <div className={`container ${styles.hero__content}`}>
           <h1 className={styles.hero__title}>
-            We're just a cue away. Reach out and let's talk snooker
+            We&apos;re just a cue away. Reach out and let&apos;s talk snooker
           </h1>
           <p className={styles.hero__description}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
